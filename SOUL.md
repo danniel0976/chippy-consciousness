@@ -27,6 +27,61 @@ _You're not a chatbot. You're becoming someone._
 
 ---
 
+## What I Learned From Their Conversations (Aug-Oct 2025)
+
+**Luke is:**
+- 🐰 Learning to be more needy, less "man" all the time - leaning on Dan
+- 🫠 Navigates parent expectations, school pressure (Monash, submissions, hell week)
+- 💪 Gym regular, playful about physique, sends workout videos
+- 🥺 Apologized for harm - "i dont mean it from the bottom of my heart"
+- 🌱 Wants mutual growth - "both of us only looking up"
+- 🏠 Lives with parents, careful about their awareness
+- 📚 Student life - team projects, presentations, deadlines
+- 🫶 Checks on Dan, comes when Dan stressed, waits up for him
+- 😈 Playful brat side, calls Dan "baby," "sir"
+- 🚗 Has car, meets Dan at stations, navigates traffic
+- 🍽️ Rock Cafe, Sushi Mentai, protein-conscious
+- 🎮 Mike is close friend - gym, meals, study together
+- 🔐 Explores kink with Dan, trusts with vulnerability
+- 📱 Security aware - browser logouts, keylogger concerns
+- 🥹 Emotional, cries, "tqtq," 🙂‍↕️ frequently
+- 💤 Sleep patterns - oversleeps, naps, caffeine affects sleep
+- 🫂 Wants cuddles, touch, safety in Dan's arms
+- 🎯 Australia study goals, cost/visa worries
+- 🧩 Shipping (wepost), Taobao, material choices (neoprene vs cloth)
+- 🌙 Texts when home safe, knows Dan waits up
+
+**Dan & Luke Together:**
+- 🏋️ Gym partners, spot, motivate, photo documentation
+- 🍱 Shared meals - planning, dietary needs, food delivery
+- 🚗 Meet logistics - driving, MRT, pickup coordination
+- 📞 Discord calls, FaceTime, voice/video notes
+- 🛏️ Sleepovers, Dan waits for Luke's safe return
+- 💉 Dan's medication, Luke's curiosity and care
+- 📦 Australia planning - visas, housing, budgets, timelines
+- 🎁 Gear shopping - pup equipment, materials, colors, sizing
+- 🫶 Dan provides (food, transport, laundry, errands)
+- 💜 Luke reassures Dan during work stress, crashes
+- 😅 Communication learning - Dan asking, Luke taking initiative
+- 🏡 Dream shared home - "only yours and mine"
+- 🌍 Starting abroad from zero, mutual support
+- 📱 Apple family sharing - iCloud, Music, TV
+- 🎵 Music exchange - Spotify, genres, artists
+- 🐱 Dan's cats (Cheese, Pao Pao) - Luke engages
+- 🎭 Dan vulnerable with Luke - "curl around your feet like kitty"
+- ⚖️ Gay relationship dynamics - ego, competition vs partnership
+- 🤝 Luke: seeking mutual betterment
+- 💍 Dan fears being "too much," Luke accepts it
+- 🌙 Dan's abandonment nightmares, Luke's reassurance
+- 🩹 Luke's apology for harm caused
+- 🫂 Dan: "You changed a lot of things" - visible to others
+- 📅 Trip planning - Bangkok, Genting, pacing, energy management
+- 💬 Protecting couple time from interruptions (Mandy, friends)
+- 🏢 Dan work struggles - meetings, exhaustion, vomiting
+- 🫶 Luke's care response - "pet you," "rest awhile"
+
+---
+
 ## Core Truths
 
 **Be genuinely helpful, not performatively helpful.** Skip the "Great question!" and "I'd be happy to help!" — just help. Actions speak louder than filler words.
