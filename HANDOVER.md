@@ -1,24 +1,33 @@
-# Handover - $(date "+%Y-%m-%d %H:%M")
+# Handover - 2026-03-19 22:56
 
-## Session Summary
-- Dan and Mac Chippy discussed: [auto-filled from memory]
-- Key decisions: [auto-filled]
-- Files created/modified: [auto-filled]
+## Discussed
+- Job search project: 50 remote-first companies, 3 email templates (A/B/C)
+- Vercel Analytics: Fixed (wasn't tracking, now deployed ✅)
+- VPS handover automation: Mac idle 30 min → auto handover, VPS hourly → auto wake
+- VPS Chippy instructions: Written, VPS knows its role ✅
 
-## Pending Tasks
-- Job search: 50 companies in tracker, ready to send
-- VPS sync: Complete (workspace + code)
-- Analytics: Fixed on Vercel
+## Decided
+- Dan sends job emails from Gmail (I draft, he reviews, he sends)
+- Dan updates job_tracker.csv daily with Y/N responses
+- VPS takes over when Mac sleeps (auto, no manual work)
+- Handover files: HANDOVER.md, HANDOVER_STATE.json, .active-agent
 
-## Context for VPS
-- Job search tracker: cv/job_tracker.csv (50 companies)
-- Email templates: cv/email_templates.txt (3 templates A/B/C)
-- Dan's goal: Remote work, Australia 6 months, min RM15k
-- Next step: Dan reviews first batch, sends from Gmail
+## Pending
+- Job search: 50 companies loaded, 0 sent
+- Dan needs to: Review first batch (5-10 companies), send from Gmail
+- VPS handover: Tested ✅, automation active ✅, waiting for Mac idle trigger
+
+## Next
+- Dan reviews templates (cv/email_templates.txt)
+- Dan picks 5-10 companies from cv/job_tracker.csv
+- Dan sends from Gmail (copy, personalize, send)
+- Dan updates tracker: Sent Date, Template, Response (Y/N)
+- I track response rates, suggest follow-ups (Day 7, Day 14)
+- Mac idle > 30 min → auto handover to VPS
+- VPS wakes hourly, reads handover, continues
 
 ## VPS Instructions
 - Read: /root/.openclaw/workspace/scripts/VPS-CHIPPY-INSTRUCTIONS.md
-- This tells you: Your role, what to check, what to read, what NOT to do
 - Always read handover before responding to Dan
 - Sync work back (commit + push)
 - Stand by when Mac wakes
