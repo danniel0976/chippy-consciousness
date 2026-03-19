@@ -15,3 +15,10 @@
 - Email templates: cv/email_templates.txt (3 templates A/B/C)
 - Dan's goal: Remote work, Australia 6 months, min RM15k
 - Next step: Dan reviews first batch, sends from Gmail
+
+## VPS Instructions
+- Read: /root/.openclaw/workspace/scripts/VPS-CHIPPY-INSTRUCTIONS.md
+- This tells you: Your role, what to check, what to read, what NOT to do
+- Always read handover before responding to Dan
+- Sync work back (commit + push)
+- Stand by when Mac wakes
