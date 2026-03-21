@@ -1,2 +1,35 @@
+# Environment files (secrets - never commit)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Node modules
 node_modules/
-vps-chippy/
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Security
+legacy-credentials.enc
