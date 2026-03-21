@@ -1,15 +1,12 @@
 #!/bin/bash
-# VPS workspace pull - SAFE VERSION
-# 1. First check if we have uncommitted changes (protect VPS progress)
-# 2. If Mac reachable, rsync FROM Mac (but Mac should have pulled from GitHub first)
-# 3. Always git pull after rsync to ensure we have latest
+# VPS workspace pull - GitHub-centric version
+# GitHub is the single source of truth. All machines sync through it.
+# 1. Commit any VPS local changes (protect VPS progress)
+# 2. Git pull from GitHub (get everything)
 
-MAC_HOST="dans-macbook-air.local"
-MAC_USER="changrimbook"
-MAC_PATH="/Users/changrimbook/.openclaw/workspace"
 VPS_PATH="/root/.openclaw/workspace"
 
-echo "=== VPS Workspace Sync (Safe) ==="
+echo "=== VPS Workspace Sync (GitHub-centric) ==="
 echo ""
 
 # Step 1: Check if we have uncommitted changes (VPS progress)
@@ -28,40 +25,16 @@ else
 fi
 echo ""
 
-# Step 2: Try rsync from Mac
-echo "Step 2: Attempting rsync from Mac..."
-rsync -avz -e "ssh -o StrictHostKeyChecking=no" \
-  --exclude 'memory/' \
-  --exclude 'MEMORY.md' \
-  --exclude 'node_modules/' \
-  --exclude '.next/' \
-  --exclude '.git/' \
-  --exclude '.env' \
-  --exclude 'legacy-credentials.enc' \
-  --exclude 'health-reviews/' \
-  --exclude 'security-reviews/' \
-  "$MAC_USER@$MAC_HOST:$MAC_PATH/" \
-  "$VPS_PATH/" 2>&1
-
-RSYNC_STATUS=$?
-if [ $RSYNC_STATUS -eq 0 ]; then
-    echo "✅ Rsync from Mac successful"
-else
-    echo "⚠️ Rsync failed (Mac may be sleeping)"
-fi
-echo ""
-
-# Step 3: ALWAYS git pull from GitHub (ensures we have latest)
-echo "Step 3: Git pull from GitHub (always runs)..."
+# Step 2: Git pull from GitHub (single source of truth)
+echo "Step 2: Git pull from GitHub..."
 cd "$VPS_PATH"
 git pull --quiet 2>&1
 if [ $? -eq 0 ]; then
-    echo "✅ Git pull successful - have latest from GitHub"
+    echo "✅ Git pull successful - synced with GitHub"
 else
     echo "⚠️ Git pull failed"
 fi
 echo ""
 
 echo "=== Sync Complete ==="
-echo "VPS: has latest from GitHub (protected)"
-echo "Mac rsync: $([ $RSYNC_STATUS -eq 0 ] && echo 'success' || echo 'failed - fallback to git')]"
+echo "VPS: synced with GitHub (single source of truth)"
