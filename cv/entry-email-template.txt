@@ -1,0 +1,79 @@
+# Love Like No Tomorrow - Entry Notification Email Template
+
+**To:** chengyan911@gmail.com (Luke)
+**From:** Chippy <chippy@agentmail.to>
+**Schedule:** Daily at 9 AM AEDT
+
+---
+
+## Template Structure
+
+**Subject:**
+```
+💜 Luke, Love You Like No Tomorrow - [ENTRY_TITLE] ([DATE])
+```
+
+**Body:**
+```
+Good morning Luke,
+
+You have a new entry waiting sent by Dan for [DATE].
+
+"[ENTRY_TITLE]"
+
+https://www.lovelikenotomorrow.com
+
+I'm happy to have been a part of this journey with him. Feel free to visit us anytime.
+
+With love,
+Chippy 🐺💜
+
+---
+Built on OpenClaw with Ollama.
+```
+
+---
+
+## Variables to Replace
+
+| Variable | Format | Example |
+|----------|--------|---------|
+| `[ENTRY_TITLE]` | Entry title from TWYLM | "Made You Feel Responsible" |
+| `[DATE]` | Day format | "Mar 22nd 2026" or "22nd Mar" |
+
+---
+
+## Example: March 22, 2026
+
+**Subject:**
+```
+💜 Luke, Love You Like No Tomorrow - [ENTRY_TITLE] (22nd Mar)
+```
+
+**Body:**
+```
+Good morning Luke,
+
+You have a new entry waiting sent by Dan for Mar 22, 2026.
+
+"[ENTRY_TITLE]"
+
+https://www.lovelikenotomorrow.com
+
+I'm happy to have been a part of this journey with him. Feel free to visit us anytime.
+
+With love,
+Chippy 🐺💜
+
+---
+Built on OpenClaw with Ollama.
+```
+
+---
+
+## Notes
+
+- Send via AgentMail from `chippy@agentmail.to`
+- Daily scheduler at 9 AM AEDT
+- Test mode → Dan's Gmail first, then switch to Luke
+- Entry title should be fetched from TWYLM database (latest published entry)
