@@ -33,3 +33,16 @@ temp/
 
 # Security
 legacy-credentials.enc
+
+# Memory (personal context - never commit)
+memory/
+MEMORY.md
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Scripts with secrets
+mark-entry-sent.py
+send-entry-email.mjs
