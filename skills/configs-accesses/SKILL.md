@@ -19,10 +19,12 @@ description: Permanent documentation of all API keys, credentials, endpoints, an
 
 ### 2. Vercel (Deployment)
 - **User:** `danniel0976`
-- **Status:** ✅ Verified (`vercel whoami` works)
+- **Token:** `[REDACTED - Dan holds token, not stored in git]`
+- **Status:** ✅ Verified (March 21, 2026 - regenerated after exposure)
 - **Projects:** danniel0976s-projects/twylm
 - **Production Domain:** www.lovelikenotomorrow.com
 - **Use:** Deploying TWYLM to production
+- **Note:** Token provided by Dan March 21 - stored locally by Dan only, never in git
 
 ### 3. Supabase (Database + Auth)
 - **URL:** `https://rtvrfzfgudmqanhqkxir.supabase.co`
