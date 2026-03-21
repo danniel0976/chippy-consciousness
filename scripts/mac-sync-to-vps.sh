@@ -1,50 +1,41 @@
 #!/bin/bash
-# Mac sync workflow - Run this on Mac when waking up
-# 1. Pull latest from GitHub (get VPS changes)
-# 2. Then rsync TO VPS (both now in sync)
+# Mac sync workflow - GitHub-centric
+# Run this on Mac when you have local changes to sync
+# 1. Commit any Mac local changes
+# 2. Push to GitHub (VPS will pull automatically)
 
-VPS_HOST="152.42.226.184"
-VPS_USER="root"
-VPS_KEY="/Users/changrimbook/.ssh/chippy-vps-key"
-VPS_PATH="/root/.openclaw/workspace"
 MAC_PATH="/Users/changrimbook/.openclaw/workspace"
 
-echo "=== Mac Sync Workflow ==="
+echo "=== Mac Sync Workflow (GitHub-centric) ==="
 echo ""
 
-# Step 1: Pull latest from GitHub (CRITICAL - get VPS changes first)
-echo "Step 1: Pulling latest from GitHub..."
+# Step 1: Check if we have uncommitted changes
+echo "Step 1: Checking for uncommitted changes..."
 cd "$MAC_PATH"
-git pull --quiet 2>&1
-if [ $? -eq 0 ]; then
-    echo "✅ GitHub pull successful - now have VPS changes"
+CHANGES=$(git status --porcelain 2>&1 | wc -l)
+if [ "$CHANGES" -gt 0 ]; then
+    echo "⚠️ Mac has $CHANGES uncommitted file(s)"
+    echo "Committing changes..."
+    git add -A
+    git commit -m "Mac work $(date +%Y-%m-%d_%H:%M)" 2>&1
+    echo "✅ Changes committed"
 else
-    echo "⚠️ GitHub pull failed - continuing anyway"
+    echo "✅ No uncommitted changes"
 fi
 echo ""
 
-# Step 2: Rsync TO VPS (now both in sync)
-echo "Step 2: Syncing to VPS..."
-rsync -avz -e "ssh -i $VPS_KEY -o StrictHostKeyChecking=no" \
-  --exclude 'memory/' \
-  --exclude 'MEMORY.md' \
-  --exclude 'node_modules/' \
-  --exclude '.next/' \
-  --exclude '.git/' \
-  --exclude '.env' \
-  --exclude 'legacy-credentials.enc' \
-  --exclude 'health-reviews/' \
-  --exclude 'security-reviews/' \
-  "$MAC_PATH/" \
-  "$VPS_USER@$VPS_HOST:$VPS_PATH/" 2>&1
-
+# Step 2: Push to GitHub (VPS pulls automatically every 6h)
+echo "Step 2: Pushing to GitHub..."
+cd "$MAC_PATH"
+git pull --quiet 2>&1
+git push origin main 2>&1
 if [ $? -eq 0 ]; then
-    echo "✅ Rsync to VPS successful"
+    echo "✅ Pushed to GitHub - VPS will sync automatically"
 else
-    echo "⚠️ Rsync failed - VPS will fallback to git pull"
+    echo "⚠️ Push failed"
 fi
 echo ""
 
 echo "=== Sync Complete ==="
-echo "Mac: has latest from GitHub"
-echo "VPS: has latest from Mac rsync (or git pull fallback)"
+echo "Mac: committed and pushed to GitHub"
+echo "VPS: will pull from GitHub on next 6h cron run"
