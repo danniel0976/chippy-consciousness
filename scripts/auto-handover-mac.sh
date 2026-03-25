@@ -35,7 +35,9 @@ EOF
     cd "$WORKSPACE"
     git add -A
     git commit -m "Auto handover: Mac idle > 30min" || echo "No changes to commit"
-    git push origin main || echo "Push skipped"
+    
+    # Push with timeout to prevent hanging in cron
+    timeout 10 git push origin main 2>/dev/null || echo "Push skipped (timeout/no auth)"
     
     echo "Handover complete. VPS Chippy taking over."
     
